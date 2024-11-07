@@ -119,5 +119,9 @@ def add_feature_row(feature, imageId):
         # Close the file object
         f_object.close()
 
+@app.route('/', methods=['GET'])
+def test():
+    return "hello world"
+
 if __name__ == "__main__":
     app.run(debug=True)
