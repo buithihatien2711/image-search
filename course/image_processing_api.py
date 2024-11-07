@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 import cv2
 import os
-from course.pyimagesearch.colordescriptor import ColorDescriptor
-from course.pyimagesearch.searcher import Searcher
+from pyimagesearch.colordescriptor import ColorDescriptor
+from pyimagesearch.searcher import Searcher
 from csv import writer
 import numpy as np
 from flask_cors import CORS
