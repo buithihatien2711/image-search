@@ -24,6 +24,5 @@ COPY . /app
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
 
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD ["gunicorn", "--bind", "0.0.0.0:7000", "-k", "uvicorn.workers.UvicornWorker", "course.image_processing_api:app"]
-# CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0:7000"]
+# Use Gunicorn with default workers for Flask (WSGI app)
+CMD ["gunicorn", "--bind", "0.0.0.0:7000", "course.image_processing_api:app"]
