@@ -5,9 +5,10 @@ from course.pyimagesearch.colordescriptor import ColorDescriptor
 from course.pyimagesearch.searcher import Searcher
 from csv import writer
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 # Folder to save uploaded images temporarily
 UPLOAD_FOLDER = "uploads"
 # Path to where the computed index will be stored (Location of feature vector is saved)
