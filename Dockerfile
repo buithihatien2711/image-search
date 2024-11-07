@@ -27,4 +27,4 @@ USER appuser
 # Use Gunicorn with default workers for Flask (WSGI app)
 # CMD ["gunicorn", "--bind", "0.0.0.0:7000", "course.image_processing_api:app"]
 # CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0:7000"]
-CMD ["python", "./image_processing_api.py"] 
+CMD ["flask", "run", "--host=0.0.0.0:7000"]
