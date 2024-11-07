@@ -59,7 +59,7 @@ def search_image():
         # cv2.imshow("Result", result)
         # cv2.waitKey(0)
 
-    # Optionally, delete the file after processing
+    # delete the file after processing
     os.remove(image_path)
 
     return jsonify(result_ids=result_ids), 200
@@ -94,7 +94,7 @@ def process_image():
 
     add_feature_row(features, image_id)
 
-    # Optionally, delete the file after processing
+    # delete the file after processing
     os.remove(image_path)
 
     return jsonify({"success": True}), 200

@@ -27,6 +27,9 @@ class Searcher:
 				# value is the distance we just computed, representing
 				# how 'similar' the image in the index is to our query
 				results[row[0]] = d
+				# image_id = row[0]
+				# if image_id not in results or d < results[image_id]:
+				# 	results[image_id] = d
 			# close the reader
 			f.close()
 		# sort our results, so that the smaller distances (i.e. the
