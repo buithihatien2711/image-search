@@ -119,9 +119,13 @@ def add_feature_row(feature, imageId):
         # Close the file object
         f_object.close()
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def test():
-    return "hello world"
+    if request.method == "POST":
+        data = request.get_json()  # Or `request.form` for form data
+        # Process your data
+        return jsonify({"status": "Received POST request"}), 200
+    return jsonify({"status": "GET request successful"}), 200
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=7000)
