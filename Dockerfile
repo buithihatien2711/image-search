@@ -21,9 +21,8 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
-COPY . /app
-
 RUN git lfs pull
+COPY . /app
 
 # Navigate to the course folder where main.py is located
 WORKDIR /app/course
