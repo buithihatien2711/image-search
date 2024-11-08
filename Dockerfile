@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y git-lfs
 RUN git lfs install
 
 WORKDIR /app
-RUN git clone https://github.com/your-username/your-repository.git . && git lfs pull
+RUN git clone https://github.com/buithihatien2711/image-search.git . && git lfs pull
 
 # Install pip requirements
 COPY requirements.txt .
