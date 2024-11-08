@@ -23,10 +23,11 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . /app
 
-# Navigate to the course folder where main.py is located
-WORKDIR /app/course
 RUN git lfs pull
 RUN ls -lh /app/course/path/to/your-large-file.csv
+
+# Navigate to the course folder where main.py is located
+WORKDIR /app/course
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers

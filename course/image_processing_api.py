@@ -12,7 +12,7 @@ CORS(app)
 # Folder to save uploaded images temporarily
 UPLOAD_FOLDER = "uploads"
 # Path to where the computed index will be stored (Location of feature vector is saved)
-# index_path = "../index/index.csv" # use relative when not open code by workspace
+# index_path = "index.csv" # use relative when not open code by workspace
 index_path = "index.csv" # use absolute path when open code by folder
 # index_path = "C:/temp/Image-Search-Engine/index/index2.csv"
 # Path to the result (path of all image)

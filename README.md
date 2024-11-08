@@ -36,9 +36,9 @@ The query image will be segmented into 5 parts as shown below. Each part will de
 Download this repo and change the directory to the main folder containing all the files in this repo, through the command prompt, and type the following commands.
 
 ```
-py index.py --dataset ..\images\ --index ..\index\index.csv
+py index.py --dataset ..\images\ --index index.csv
 
-py search.py --index .index.csv --query ..\query\02_1_front.jpg
+py search.py --index index.csv --query ..\query\02_1_front.jpg
 ```
 
 ## Outputs after execution:

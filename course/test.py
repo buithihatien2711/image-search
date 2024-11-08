@@ -3,7 +3,7 @@ import os
 from pyimagesearch.colordescriptor import ColorDescriptor
 from csv import writer
 
-index_path = "C:/temp/Image-Search-Engine/index/index.csv" # use absolute path when open code by folder
+index_path = "index.csv" # use absolute path when open code by folder
 
 def add_feature_row(feature, imageId):
     # List that we want to add as a new row
