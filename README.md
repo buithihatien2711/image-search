@@ -38,7 +38,7 @@ Download this repo and change the directory to the main folder containing all th
 ```
 py index.py --dataset ..\images\ --index ..\index\index.csv
 
-py search.py --index ..\index\index.csv --query ..\query\02_1_front.jpg
+py search.py --index .index.csv --query ..\query\02_1_front.jpg
 ```
 
 ## Outputs after execution:
