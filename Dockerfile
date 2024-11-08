@@ -11,7 +11,10 @@ ENV PYTHONUNBUFFERED=1
 
 RUN apt-get update && apt-get install -y git-lfs
 RUN git lfs install
-RUN git lfs pull
+
+WORKDIR /app
+RUN git clone https://github.com/your-username/your-repository.git . && git lfs pull
+
 # Install pip requirements
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
@@ -21,8 +24,8 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
-COPY . /app
+# WORKDIR /app
+# COPY . /app
 
 # Navigate to the course folder where main.py is located
 WORKDIR /app/course
