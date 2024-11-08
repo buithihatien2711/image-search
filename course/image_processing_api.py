@@ -48,7 +48,7 @@ def search_image():
     results = searcher.search(features, limit)
 
     # display the query
-    cv2.imshow("Query", image)
+    # cv2.imshow("Query", image)
     # loop over the results and display result
     result_ids = []
     for (score, resultID) in results:
