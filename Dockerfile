@@ -24,7 +24,6 @@ WORKDIR /app
 COPY . /app
 
 RUN git lfs pull
-RUN ls -lh /app/course/path/to/your-large-file.csv
 
 # Navigate to the course folder where main.py is located
 WORKDIR /app/course
